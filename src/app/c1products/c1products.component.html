@@ -1,0 +1,96 @@
+<!-- <div style="background-color: whitesmoke;margin-top:105px; margin-left:150px;margin-right: 150px;" > -->
+
+    
+
+    <!-- <div class="row row-cols-1 row-cols-md-6" style="margin-top: 50px;" >
+        <div class="col mb-4" *ngFor="let i of products">
+            
+            <div class="card" style="height: 450px;margin-top: 50px;margin-bottom: 10px;">
+                <div class="card-body">
+                    <a routerLink="/product/{{i._id}}">
+                        <img height="200px" width="200px" src="http://localhost:3009/{{i.productImagePath[0].path}}" class="card-img-top" alt="...">
+                        <p class="card-title" >{{i.cpname}}</p>
+                    </a>
+                    <button class="btn btn-success btn-sm " style="color:white;font-weight: bold;" >{{i.rating}}</button>                     
+                    <div >
+                        <p style="font-size-adjust: 0.5;margin-top: 5px;margin-bottom: 0em;">MRP Price</p>
+                        <h5 style="color: black;font-weight: 600;margin-bottom: 0em;" class= "card-text">₹ <span style="font-size-adjust: 0.5; font-family:Arial, Helvetica, sans-serif;">{{i.price}}</span></h5>
+                        <p class="card-text" style="font-family: cursive;line-height: unset;">Quantity:{{i.quantity}}</p>
+                    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div> -->
+    
+
+    <!-- <h4 style="font-family:'Times New Roman', Times, serif;font-weight: bolder; text-align: center;margin-top: 4px;">SOME DIET AND NUTRITIONAL PRODUCTS</h4>
+    <hr>
+    <div class="row">
+        <div class=" row col-lg-2 col-sm-4 " style="margin-bottom: 10px;margin-left: 150px;" *ngFor="let i of products" >
+        <a routerLink="/product/{{i._id}}">
+
+            <img style="text-align: center;margin-left: 30px;" height="170px" width="170px" src="http://localhost:3009/{{i.productImagePath[0].path}}" alt="">
+            <h5 style="color: black;font-weight: 400;margin-bottom: 0em;margin-top: 5px;" class="card-text">₹ <span style="font-size-adjust: 0.7; font-family:Arial, Helvetica, sans-serif;">{{i.price}}</span></h5>
+
+            <p style="color: black;margin-top: 5px;">{{i.cpname}}</p>
+        </a>
+        
+        </div>
+    </div>
+</div> -->
+
+<br><hr>
+<!-- 
+<h4 style="font-family:'Times New Roman', Times, serif;font-weight: bolder; text-align: center;margin-top: 4px;">SOME DIET AND NUTRITIONAL PRODUCTS</h4>
+<hr>
+<div class="row">
+    <div class=" row col-lg-3 col-sm-4 " style="margin-bottom: 10px;margin-left: 150px;" *ngFor="let i of hnproduct" >
+      <a routerLink="/hnproduct/{{i._id}}">
+
+        <img style="text-align: center;margin-left: 30px;" height="170px" width="170px" src="http://localhost:3009/{{i.productImagePath}}" alt="">
+        <h5 style="color: black;font-weight: 400;margin-bottom: 0em;margin-top: 5px;" class="card-text">₹ <span style="font-size-adjust: 0.7; font-family:Arial, Helvetica, sans-serif;">{{i.price}}</span></h5>
+
+        <p style="color: black;margin-top: 5px;">{{i.hname}}</p>
+      </a>
+      
+    </div>
+  </div> -->
+
+  <hr><hr><hr>
+
+  <hr>
+  <!-- <h4 style="font-family:'Times New Roman', Times, serif;font-weight: bolder; text-align: center;margin-top: 10px;">SOME DIET AND NUTRITIONAL PRODUCTS</h4> -->
+  <hr>
+  <div class="row">
+      <div class=" row col-lg-3 col-sm-4 " style="margin-bottom: 10px;margin-left: 125px;border: 1px solid rgb(219, 214, 214);margin-top: 10px;" *ngFor="let i of products" >
+        <a routerLink="/product/{{i._id}}">
+          
+          <img style="text-align: center;margin-left: 30px;margin-top: 10px;" height="200px" width="200px" src="http://localhost:3009/{{i.productImagePath[0].path}}" alt="">
+          <p style="color: black;margin-top: 5px;font-size: large;">{{i.cpname}}</p>
+          <button class="btn btn-success btn-sm " style="color:white;font-weight: bold;" >{{i.rating}}</button>                     
+          <p style="font-size-adjust: 0.5;margin-top: 5px;margin-bottom: 0em;">MRP Price</p>
+
+          <h5 style="color: black;font-weight: 5500;margin-bottom: 0em;margin-top: 5px;" class="card-text">₹ <span style="font-size-adjust: 0.6; font-family:Arial, Helvetica, sans-serif;">{{i.price}}</span></h5>
+          <!-- <h5 style="color: black;font-weight: 600;margin-bottom: 0em;" class= "card-text">₹ <span style="font-size-adjust: 0.5; font-family:Arial, Helvetica, sans-serif;">{{i.price}}</span></h5> -->
+
+          <p class="card-text" style="font-family: cursive;line-height: unset;margin-top: 5px;font-size: large;">Quantity:{{i.quantity}}</p>      
+        </a>
+        
+      </div>
+    </div>
+
+
+    <hr>
+<br>
+
+
+
+
+
+
+
+
+
+  

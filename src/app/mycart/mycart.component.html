@@ -1,0 +1,80 @@
+
+<h2 style="text-align: center;color: rgb(39, 36, 36);font-family: 'Noto Serif KR', serif;margin-top: 120px;">MY CART ITEMS</h2>
+<hr>
+<div style="margin-right: 8rem;margin-left: 8rem;" class="row ">
+  <div style="margin-bottom: 1rem;" class="one col-lg-8 col-md-8 col-sm-8 "  *ngFor="let i of cart;let m = index">
+    <div  class="card h-100 w-150">
+   <table >
+        <tr style="background-color: white;">
+            <td><img width="250px" height="280px" src="http://localhost:3009/{{i.product_image[0].path}}" alt="Card image"></td>
+            <td style="margin-top: 0;margin-left: 3;">
+            
+                    <h4 style="font-family: 'Noto Serif KR', serif;font-size:larger;">{{i.product_name}} <br> </h4><br>
+                    <h5><span style="color: blue;">Product Qty:</span> &nbsp; <span style="color: black;font-size: 20px;">{{i.product_count}}</span><br> <br>
+                    <span style="color:blue;">  Product Price:</span>&nbsp;  <span style="color:black;">  {{i.product_price}} &nbsp; &nbsp;&nbsp;</span><br><hr>
+                    <span style="color: blue;"> Product Total:</span>&nbsp; <span style="color:black;">   {{i.product_count * i.product_price }}</span></h5>                
+            </td>
+        </tr>
+
+
+
+       
+    
+   </table>
+   
+       
+   
+        <button  (click)="deleteCart(m)" class="rem btn-danger text-light" style="position: absolute;bottom: 0;right: 0;background-color:red;">
+            Remove X
+         </button>
+  
+   
+  </div> </div>
+  <div style="position: fixed;right: 0;margin-top: 90px;line-height: 3;border: none;"  class=" col-lg-4 col-md-4 col-sm-4 ">
+    <div *ngIf="cart.length !== 0" class="card" style="width: 18rem;">
+        
+        <div style="background-color: #dcffcc;" class="card-body">
+            <img style="margin-left: 50px;" src="../../assets/n1logo.png" class="rounded-circle" width="150px" height="180px" alt="logo">
+            <h4>Price Details: <br></h4>
+            
+            <table>
+                <tr>
+                    <td>Price Total</td>
+                    <td style="float:right">{{final_total}}.00 Rs</td>
+                </tr>
+               <tr> 
+                    <td >Delivary Charges</td>
+                    <td style="float: right;"> 40.00 Rs</td> 
+                </tr>
+                <hr>
+                <tr>
+                    <td style="font-weight: bold;font-size: 1.3em;">Cart total</td>
+                    <td style="float: right;font-weight: bold;font-size: 1.3em;"> {{final_total+40}}.00 Rs</td>
+
+                </tr>
+            </table>
+            
+            
+          
+          <button (click)="placeOrder2()"  class="btn btn-success btn-block mr-8">
+           Place Order
+       </button>
+        </div>
+      </div>
+     
+         
+    
+   </div>
+</div> 
+<div *ngIf="cart.length === 0" style="text-align: center;margin-top: 1rem;">
+        <img height="550px" width="550px" src="../../assets/cart.png" alt="">
+        <br>
+        <br>
+   <h5> Hey,it feels so light!</h5>
+   <h6 style="color: darkslategrey;"> There is nothing in your cart.Let's add some items.</h6>
+   
+   <a routerLink="/main" class="btn btn-outline-success">
+    ADD ITEMS
+</a>
+<hr>
+ 
